@@ -42,7 +42,7 @@ et_keys = {
     'incollection': 'booktitle'
 }
 et_source_tags = {
-    'article': '#ref/Paper',
+    'article': '#R-Paper',
     'book': '#ref/Book',
     'incollection': '#ref/BookChapter',
     'inproceedings': '#ref/Paper'
@@ -66,7 +66,8 @@ if 'url' in entry:
 embed = "Placeholder"
 
 # stitch everything together
-out_str = "- #references:\n\t- Title: %s\n\t- Meta:\n\t\t- Tags: %s\n\t\t- Authored by:: %s\n\t\t- Year: [[%s]]\n\t\t- Publication: %s\n\t\t- URL: %s\n\t\t- Citekey: %s\n\t- Content\n\t\t- %s" %(title, source_tag, " , ".join(authors), year, publication, url, entry['ID'], embed)
+#out_str = "- #references:\n\t- Title: %s\n\t- Metadata:\n\t\t- Tags: %s\n\t\t- Authored by:: %s\n\t\t- Year: [[%s]]\n\t\t- Publication: %s\n\t\t- URL: %s\n\t\t- Citekey: %s\n\t- Content\n\t\t- %s" %(title, source_tag, " , ".join(authors), year, publication, url, entry['ID'], embed)
+out_str = "- Metadata:\n\t- Title: %s\n\t\t- Tags:: %s\n\t- Authored by:: %s\n\t- Year: [[%s]]\n\t- Publication: %s\n- Context\n- Reading Notes\n\t- Key ideas:" %(title, source_tag, " , ".join(authors), year, publication)
 
 # append to the clipboard
 r.clipboard_clear()
