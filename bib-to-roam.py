@@ -39,7 +39,8 @@ entry_type = entry['ENTRYTYPE']
 et_keys = {
     'article': 'journal',
     'inproceedings': 'booktitle',
-    'incollection': 'booktitle'
+    'incollection': 'booktitle',
+    'thesis': 'booktitle'
 }
 et_source_tags = {
     'article': '#R-Paper',
